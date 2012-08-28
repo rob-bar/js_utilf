@@ -52,7 +52,7 @@ Debugger.log = function(message) {
     try {
         if (Debugger.isTracing) console.log(message);
     } catch(exception) {
-        console.log(exception);
+        // console.log(exception);
         return;
     }
 }
@@ -61,7 +61,7 @@ Debugger.obj = function(obj) {
     try {
         if (Debugger.isTracing) console.dir(obj);
     } catch(exception) {
-        console.log(exception);
+        // console.log(exception);
         return;
     }
 }
@@ -189,7 +189,9 @@ function arrayContains(a, obj) {
 }
 
 
-
+// ========================================
+// = Prep the canvas to draw dotted lines =
+// ========================================
 CanvasRenderingContext2D.prototype.dashedLine = function(x1, y1, x2, y2, dashLen) {
     if (dashLen == undefined) dashLen = 2;
     
